@@ -31,7 +31,8 @@ spring:
 
       routes:
         - id: employee-service
-          uri: http://edu25-ingressgateway
+          ##uri: http://edu25-ingressgateway
+          uri: http://istio-ingressgateway.istio-system.svc
           predicates:
             - Path=/**
           filters:
