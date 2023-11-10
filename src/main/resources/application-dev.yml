@@ -1,20 +1,20 @@
 server:
   port: 8800
 
-#resilience4j.circuitbreaker:
-#  configs:
-#    default:
-#      registerHealthIndicator: true
-#      slidingWindowType: COUNT_BASED
-#      slidingWindowSize: 10 # {통계건수}
-#      minimumNumberOfCalls: 2 # {최소요청횟수}
-#      failureRateThreshold: 60 # {실패율}
-#      permittedNumberOfCallsInHalfOpenState: 2
-#      waitDurationInOpenState: 5s # {Circuit Breaker유지시간}
-#      eventConsumerBufferSize: 10
-#  instances:
-#    mycb:
-#      baseConfig: default
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: true
+      slidingWindowType: COUNT_BASED
+      slidingWindowSize: 10 # {통계건수}
+      minimumNumberOfCalls: 2 # {최소요청횟수}
+      failureRateThreshold: 60 # {실패율}
+      permittedNumberOfCallsInHalfOpenState: 2
+      waitDurationInOpenState: 5s # {Circuit Breaker유지시간}
+      eventConsumerBufferSize: 10
+  instances:
+    mycb:
+      baseConfig: default
 
 management:
   endpoints:
@@ -46,7 +46,7 @@ management:
         enabled: true
     health:
       circuitbreakers:
-        enabled: false
+        enabled: true
       ratelimiters:
         enabled: true
 
@@ -56,7 +56,8 @@ management:
         routes:
           - id: employee-service
             ## ingress gateway url ( kubectl get svc )
-            uri: http://edu25-ingressgateway
+            uri: http://backend-springboot
+            #uri: http://edu25-ingressgateway
             predicates:
               - Path=/**
             filters:
