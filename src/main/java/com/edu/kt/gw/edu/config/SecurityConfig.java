@@ -1,18 +1,25 @@
 package com.edu.kt.gw.edu.config;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
-import org.springframework.security.config.web.server.ServerHttpSecurity;
-import org.springframework.security.web.server.SecurityWebFilterChain;
+//import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+//import org.springframework.security.config.web.server.ServerHttpSecurity;
+//import org.springframework.security.web.server.SecurityWebFilterChain;
 
-@EnableWebFluxSecurity
+//@EnableWebFluxSecurity
 public class SecurityConfig{
-        @Bean
+        /*@Bean
         public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
 
             return http.csrf()
                     .disable()
                     .build();
-        }
+        }*/
+
+    /*@Bean
+    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+        http
+                .csrf(csrf -> csrf.disable());
+        return http.build();
+    }*/
 }
 

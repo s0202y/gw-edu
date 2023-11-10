@@ -55,15 +55,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>-->
+		<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
-			<optional>true</optional>
+					<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
@@ -93,13 +95,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- M1 맥북에 추가 -->
-		<!--<dependency>
+       <!-- M1 맥북에 추가 -->
+		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-resolver-dns-native-macos</artifactId>
 			<version>4.1.73.Final</version>
 			<classifier>osx-aarch_64</classifier>
-		</dependency>-->
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
