@@ -31,27 +31,11 @@ spring:
 
       routes:
         - id: employee-service
-          uri: http://backend-springboot
+          uri: http://edu25-ingressgateway
           predicates:
             - Path=/**
           filters:
             - RewritePath=/(?<path>.*),/$\{path}
-            #- Path=/backend
-            # filters:
-            #   - TokenRelay=
-            #         filters:
-            #           - name: GlobalFilter
-            #              args:
-            #                baseMessage: Spring Cloud Edu Gateway GlobalFilter
-            #                preLogger: true
-            #                postLogger: true
-            # - RewritePath=/api/v1/(?<path>.*),/$\{path}
-#        - id: neo-user-service
-#          uri: http://localhost:8080
-#          predicates:
-#            - Path=/backend/**
-#          filters:
-#            - RewritePath=/api/v1/?(?<segment>.*), /$\{segment}
 
 logging:
   level:
