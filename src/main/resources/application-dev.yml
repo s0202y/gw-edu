@@ -30,8 +30,8 @@ spring:
       #            postLogger: true
 
       routes:
-        - id: employee-service
-          uri: backend-springboot
+        - id: employee-service 
+          uri: http://backend-springboot
           ##uri: http://edu25-ingressgateway
           ##uri: http://istio-ingressgateway.istio-system.svc
           predicates:
