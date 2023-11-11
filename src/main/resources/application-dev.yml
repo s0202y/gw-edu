@@ -31,8 +31,11 @@ spring:
 
       routes:
         - id: employee-service 
-          uri: http://backend-springboot
-          ##uri: http://edu25-ingressgateway
+          ## tag v1
+          ##uri: http://backend-springboot 
+          ## tag v2
+          uri: http://edu25-ingressgateway
+          ## tag v3
           ##uri: http://istio-ingressgateway.istio-system.svc
           predicates:
             - Path=/**
