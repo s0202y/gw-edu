@@ -44,6 +44,6 @@ spring:
 
 logging:
   level:
-    org.springframework.cloud.gateway: debug
-    reactor.netty: debug
+    org.springframework.cloud.gateway: info
+    reactor.netty: info
     com.kt: trace

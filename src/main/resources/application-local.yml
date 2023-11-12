@@ -54,7 +54,8 @@ spring:
             - Path=/**
           filters:
             - RewritePath=/(?<path>.*),/$\{path}
-            #- Path=/backend
+            #- AddRequestHeader=x_guid , 12345
+              #- Path=/backend
          # filters:
          #   - TokenRelay=
           #         filters:
@@ -73,6 +74,6 @@ spring:
 
 logging:
   level:
-    org.springframework.cloud.gateway: debug
-    reactor.netty: debug
+    org.springframework.cloud.gateway: info
+    reactor.netty: info
     com.kt: trace
