@@ -34,7 +34,7 @@ spring:
           ## tag v1
           ##uri: http://backend-springboot 
           ## tag v2
-          uri: http://edu25-ingressgateway
+          uri: http://edu25-ingressgateway.edu25.svc.cluster.local
           ## tag v3
           ##uri: http://istio-ingressgateway.istio-system.svc
           predicates:
